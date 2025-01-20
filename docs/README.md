@@ -9,6 +9,11 @@
 - Data Validation: Pydantic
 - Frontend Interface: React + TypeScript
 
+## The Oauth2 authentication
+
+I used the `OAuth2Password` because it's simple to implement with `access token` whitch can be used to authorize users by roles.
+I added a verify url to check the token expiration time set with an envirment variable `ACCESS_TOKEN_EXPIRE_MINUTES` 
+
 ## Database Models (SQLAlchemy)
 ```python
 class Participant(Base):
@@ -42,3 +47,19 @@ This Boilerplate is build with `Vite`, `React 18`, `TypeScript`, `Vitest`, `Test
 ## Dockerisation
 
 Both backend and frontend are dockerized so we can ship them anyway.
+
+## database
+
+The Backend uses SQLite for development purpose.
+
+## Bugs
+
+I had a big issue building the frontend in Docker on my MacBook Pro M1. When I used node:20-alpine, it shows me the following issue:
+
+```
+[cause]: Error: Cannot find module '@rollup/rollup-linux-arm64-gnu'
+react-frontend   |   Require stack:
+react-frontend   |   - /app/node_modules/.pnpm/rollup@4.31.0/node_modules/rollup/dist/native.js
+```
+
+I continued the development on Arch Linux based i7/16G computer.

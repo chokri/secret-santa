@@ -38,12 +38,13 @@ FastAPI provides an OpenAPI url to understand and test the API on the browser by
 
 
 
-## To do
+## To Do
 
 - Secure the API with api-key authentication
 - Add deletion feature
 - Configure the application to use PosgreSQL or other database
 - Manage Context Auth in the front application
+- Create a Github Action to run tests on the CI
 
 ## Sources
 
