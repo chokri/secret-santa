@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router'
 import WelcomePage from './WelcomePage'
 import SantaPage from './SantaPage'
+import LoginPage from './LoginPage'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<WelcomePage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/app" element={<SantaPage />} />
         </Routes>
       </main>
