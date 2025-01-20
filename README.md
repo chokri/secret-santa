@@ -14,6 +14,11 @@ If you don't have `Docker`, follow these commands to run the backend:
 
 cd backend
 python -m venv .venv
+# On Linux / MacOS
+. ./.venv/bin/activate
+#On Windows
+.venv\Scripts\activate
+
 pip install --upgrade pip && pip install -r requirements.txt
 fastapi dev
 ```
@@ -26,6 +31,10 @@ npm install -g pnpm
 pnpm install
 pnpm run dev
 ```
+
+# Backend API
+
+FastAPI provides an OpenAPI url to understand and test the API on the browser by following this link [http://localhost:8000/docs](http://localhost:8000/docs)
 
 
 

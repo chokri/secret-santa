@@ -2,9 +2,11 @@ fastapi[all]~=0.115.6
 uvicorn~=0.34.0
 bcrypt
 cryptography
-python-jose
+python-jose~=3.3.0
 python-multipart
 SQLAlchemy~=2.0.37
 passlib~=1.7.4
 python-dotenv~=1.0.1
 pydantic~=2.10.5
+pytest~=8.3.4
+starlette~=0.41.3
