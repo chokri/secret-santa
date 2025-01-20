@@ -1,5 +1,31 @@
-# Secret Santa
+# Secret Santa 🎅
 
+This is a Secret Santa Web Application. To run the project, make sure you have docker installed, then, just run:
+
+```bash
+docker compose up --build
+```
+
+If you don't have `Docker`, follow these commands to run the backend:
+
+```bash
+
+# Running the Backend
+
+cd backend
+python -m venv .venv
+pip install --upgrade pip && pip install -r requirements.txt
+fastapi dev
+```
+
+To run the frontend, follow these commands:
+
+```bash
+cd frontend
+npm install -g pnpm
+pnpm install
+pnpm run dev
+```
 
 
 
@@ -7,6 +33,8 @@
 
 - Secure the API with api-key authentication
 - Add deletion feature
+- Configure the application to use PosgreSQL or other database
+- Manage Context Auth in the front application
 
 ## Sources
 

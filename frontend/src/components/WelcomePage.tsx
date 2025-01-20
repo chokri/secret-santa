@@ -1,5 +1,11 @@
 const WelcomePage = () => {
-  return <h1 className="text-center text-2xl">Welcome</h1>
+  return (
+    <div className="flex justify-center">
+      <a className="text-center text-blue-400" href="/app">
+        Enter App
+      </a>
+    </div>
+  )
 }
 
 export default WelcomePage

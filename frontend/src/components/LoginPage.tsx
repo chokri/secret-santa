@@ -45,7 +45,7 @@ const LoginPage = () => {
       if (response.ok) {
         const data = await response.json()
         localStorage.setItem('token', data.access_token)
-        navigate('/santa')
+        navigate('/app')
       } else {
         const errorData = await response.json()
         console.log({ errorData })
