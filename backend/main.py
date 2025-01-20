@@ -3,6 +3,7 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from modules.users.routes import router as users_routes
+from modules.santa.routes import router as santa_toutes
 from starlette.datastructures import CommaSeparatedStrings
 
 stage = os.environ.get('STAGE', None)
@@ -25,3 +26,4 @@ app.add_middleware(
 
 
 app.include_router(users_routes, prefix="/api")
+app.include_router(santa_toutes, prefix="/api")
