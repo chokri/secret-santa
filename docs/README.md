@@ -1,20 +1,20 @@
-
 # Documentations
-
 
 ## Tech stack
 
-- Backend Framework: FastAPI
-- Database ORM: SQLAlchemy
+- Backend Framework: FastAPI, Python
+- Database ORM: SQLAlchemy, SQLite
 - Data Validation: Pydantic
-- Frontend Interface: React + TypeScript
+- Frontend Interface: React + TypeScript + Vite
 
-## The Oauth2 authentication
+## Oauth2 authentication
 
-I used the `OAuth2Password` because it's simple to implement with `access token` whitch can be used to authorize users by roles.
-I added a verify url to check the token expiration time set with an envirment variable `ACCESS_TOKEN_EXPIRE_MINUTES` 
+The `OAuth2Password` class from FastAPI’s security module was used for its integration with access tokens. These tokens enable role-based authorization, ensuring users only access endpoints permitted for their assigned roles.
 
-## Database Models (SQLAlchemy)
+Token expiration is configured via the `ACCESS_TOKEN_EXPIRE_MINUTES` environment variable, which defines the validity duration (in minutes) of generated access tokens.
+
+## Database Models
+
 ```python
 class Participant(Base):
     __tablename__ = "participants"
@@ -36,8 +36,6 @@ class Assignment(Base):
     draw = relationship("Draw", back_populates="assignments")
 ```
 
-
-
 ## Frontend React App
 
 The React Application is based on this boilerplate `https://github.com/joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate`
@@ -56,7 +54,7 @@ The Backend uses SQLite for development purpose.
 
 I had a big issue building the frontend in Docker on my MacBook Pro M1. When I used node:20-alpine, it shows me the following issue:
 
-```
+```bash
 [cause]: Error: Cannot find module '@rollup/rollup-linux-arm64-gnu'
 react-frontend   |   Require stack:
 react-frontend   |   - /app/node_modules/.pnpm/rollup@4.31.0/node_modules/rollup/dist/native.js
