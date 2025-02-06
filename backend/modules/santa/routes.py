@@ -2,12 +2,12 @@ from datetime import datetime
 from random import choice, random
 from typing import List
 
-from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy.orm import Session
-
 from database import get_db
+from fastapi import APIRouter, Depends, HTTPException
 from modules.santa.models import Assignment, Draw, Participant
-from modules.santa.schemas import (DrawResponse, ParticipantCreate, ParticipantResponse)
+from modules.santa.schemas import (DrawResponse, ParticipantCreate,
+                                   ParticipantResponse)
+from sqlalchemy.orm import Session
 
 router = APIRouter()
 

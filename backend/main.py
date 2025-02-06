@@ -2,8 +2,8 @@ import os
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from modules.users.routes import router as users_routes
 from modules.santa.routes import router as santa_toutes
+from modules.users.routes import router as users_routes
 from starlette.datastructures import CommaSeparatedStrings
 
 stage = os.environ.get('STAGE', None)

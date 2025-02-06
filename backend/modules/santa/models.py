@@ -1,11 +1,11 @@
 from datetime import datetime
 from typing import List
 
-from pydantic import BaseModel
-from sqlalchemy import Column, Integer, String, DateTime, Table, ForeignKey, func
-from sqlalchemy.orm import relationship, declarative_base
-
 from database import engine
+from pydantic import BaseModel
+from sqlalchemy import (Column, DateTime, ForeignKey, Integer, String, Table,
+                        func)
+from sqlalchemy.orm import declarative_base, relationship
 
 Base = declarative_base()
 

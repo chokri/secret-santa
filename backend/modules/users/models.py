@@ -1,17 +1,15 @@
-from datetime import timedelta, datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Type
 
+from config import ALGORITHM, SECRET_KEY
+from database import Base, engine
+from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
-from jose import jwt, JWTError
+from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import Session
-
-from config import SECRET_KEY, ALGORITHM
-from database import Base, engine
-
-from fastapi import HTTPException, Depends
 
 passwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_schema = OAuth2PasswordBearer(tokenUrl="token")

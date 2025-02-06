@@ -1,13 +1,13 @@
 from datetime import timedelta
 
-from fastapi import APIRouter, Form, Depends, HTTPException
-from fastapi.security import OAuth2PasswordRequestForm
-from sqlalchemy.orm import Session
-
 from config import ACCESS_TOKEN_EXPIRE_MINUTES
 from database import get_db
-from modules.users.models import get_user_by_username, UserCreate, create_user, authenticate_user, create_access_token, \
-    verify_token
+from fastapi import APIRouter, Depends, Form, HTTPException
+from fastapi.security import OAuth2PasswordRequestForm
+from modules.users.models import (UserCreate, authenticate_user,
+                                  create_access_token, create_user,
+                                  get_user_by_username, verify_token)
+from sqlalchemy.orm import Session
 
 router = APIRouter()
 
