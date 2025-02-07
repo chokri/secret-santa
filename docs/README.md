@@ -1,4 +1,4 @@
-# Documentations
+# Documentation
 
 ## Tech stack
 
@@ -36,7 +36,7 @@ class Assignment(Base):
     draw = relationship("Draw", back_populates="assignments")
 ```
 
-## Frontend React App
+## Frontend
 
 The React Application is based on this boilerplate `https://github.com/joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate`
 
@@ -59,5 +59,3 @@ I had a big issue building the frontend in Docker on my MacBook Pro M1. When I u
 react-frontend   |   Require stack:
 react-frontend   |   - /app/node_modules/.pnpm/rollup@4.31.0/node_modules/rollup/dist/native.js
 ```
-
-I continued the development on Arch Linux based i7/16G computer.
