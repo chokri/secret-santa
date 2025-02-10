@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 # Documentation
+=======
+# Documentations
+>>>>>>> Stashed changes
 
 ## Tech stack
 
@@ -9,12 +13,20 @@
 
 ## Oauth2 authentication
 
+<<<<<<< Updated upstream
 The `OAuth2Password` class from FastAPI’s security module was used for its integration with access tokens. These tokens enable role-based authorization, ensuring users only access endpoints permitted for their assigned roles.
 
 Token expiration is configured via the `ACCESS_TOKEN_EXPIRE_MINUTES` environment variable, which defines the validity duration (in minutes) of generated access tokens.
 
 ## Database Models
 
+=======
+I used the `OAuth2Password`, it's simple to implement with `access token` whitch can be used to authorize users by roles.
+I added a verify url to check the token expiration time set with an envirment variable `ACCESS_TOKEN_EXPIRE_MINUTES`
+
+## Database Models (SQLAlchemy)
+
+>>>>>>> Stashed changes
 ```python
 class Participant(Base):
     __tablename__ = "participants"
@@ -36,7 +48,11 @@ class Assignment(Base):
     draw = relationship("Draw", back_populates="assignments")
 ```
 
+<<<<<<< Updated upstream
 ## Frontend
+=======
+## Frontend React App
+>>>>>>> Stashed changes
 
 The React Application is based on this boilerplate `https://github.com/joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate`
 
@@ -59,3 +75,9 @@ I had a big issue building the frontend in Docker on my MacBook Pro M1. When I u
 react-frontend   |   Require stack:
 react-frontend   |   - /app/node_modules/.pnpm/rollup@4.31.0/node_modules/rollup/dist/native.js
 ```
+<<<<<<< Updated upstream
+=======
+
+I continued the development on Arch Linux based i7/16G computer.
+
+>>>>>>> Stashed changes
